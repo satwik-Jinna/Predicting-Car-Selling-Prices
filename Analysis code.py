@@ -13,9 +13,6 @@
 # 
 # - The aim appears to be predicting the selling price of cars based on various features provided in the dataset. 
 
-# In[4]:
-
-
 import sqlite3
 import pandas as pd
 import os
@@ -120,15 +117,12 @@ select_and_display_rows(conn, select_10_rows_query, limit=15)
 conn.close()
 
 
+
 # # Database management
 # Creating SQLite tables (`car_info` and `car_features`) to normalize and store data efficiently.
 # 
 # - Two tables: `car_info` and `car_features` created using SQLite's `CREATE TABLE` statements.
 # - `car_info` contains primary key `Car_Name`, and `car_features` references `Car_Name` as a foreign key.
-
-# In[5]:
-
-
 # Database name
 db_name = 'car_data.db'
 def execute_sql_query(conn, sql_query):
@@ -236,10 +230,6 @@ conn.close()
 # 
 # - SQL query for joining `car_info` and `car_features`
 # - Utilizing SQL join queries to reconstruct combined data and converting it into a Pandas DataFrame.
-
-# In[6]:
-
-
 # Database name
 db_name = 'car_data.db'
  
@@ -271,13 +261,10 @@ print(df)
 # # Machine Learning path
 # - RandomForestRegressor applied for predicting selling prices based on car features.
 # - Features preprocessed for numeric values and split into training and testing datasets.
-# - It reduces overfitting in decision trees and helps to improve the accuracy.
+# - It reduces overfitting in decision trees and helps to improve accuracy.
 # - It is flexible to both classification and regression problems.
 # - It works well with both categorical and continuous values.
 # - It automates missing values present in the data.
-
-# In[7]:
-
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
