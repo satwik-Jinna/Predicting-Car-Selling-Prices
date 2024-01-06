@@ -7,11 +7,10 @@
 # # Significance
 # Understanding factors affecting car prices aids buyers and sellers in making informed decisions. Predictive models provide insights into pricing trends, helping both parties in negotiations.
 # 
-# 
 # # Methodology 
-# - Involves data preparation, feature analysis, model building, hyperparameter tuning, and model evaluation. 
+# Involves data preparation, feature analysis, model building, hyperparameter tuning, and model evaluation. 
 # 
-# - The aim appears to be predicting the selling price of cars based on various features provided in the dataset. 
+# The aim appears to be predicting the selling price of cars based on various features provided in the dataset. 
 
 import sqlite3
 import pandas as pd
@@ -121,8 +120,8 @@ conn.close()
 # # Database management
 # Creating SQLite tables (`car_info` and `car_features`) to normalize and store data efficiently.
 # 
-# - Two tables: `car_info` and `car_features` created using SQLite's `CREATE TABLE` statements.
-# - `car_info` contains primary key `Car_Name`, and `car_features` references `Car_Name` as a foreign key.
+# Two tables: `car_info` and `car_features` created using SQLite's `CREATE TABLE` statements.
+# `car_info` contains primary key `Car_Name`, and `car_features` references `Car_Name` as a foreign key.
 # Database name
 db_name = 'car_data.db'
 def execute_sql_query(conn, sql_query):
@@ -228,8 +227,8 @@ conn.close()
 
 # # SQL Join and DataFrame Reconstruction
 # 
-# - SQL query for joining `car_info` and `car_features`
-# - Utilizing SQL join queries to reconstruct combined data and converting it into a Pandas DataFrame.
+# SQL query for joining `car_info` and `car_features`
+# Utilizing SQL join queries to reconstruct combined data and converting it into a Pandas DataFrame.
 # Database name
 db_name = 'car_data.db'
  
@@ -309,4 +308,4 @@ print(feature_importances)
 
 
 # # Conclusion
-# - If in future we get similer model car we should predict the price in future from this prediction
+# - If in future we get similar model car we should predict the price in the future from this prediction
